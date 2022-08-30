@@ -13,14 +13,14 @@ export default function Midi() {
   const clickHandler = () => {
     if (playing) {
       togglePlayPause();
-      // router.replace({
-      //   pathname: "/",
-      // });
+      router.replace({
+        pathname: "/",
+      });
     } else {
       togglePlayPause();
-      // router.replace({
-      //   pathname: "./d2ga/1",
-      // });
+      router.replace({
+        pathname: "./d2ga/1",
+      });
     }
   };
 
