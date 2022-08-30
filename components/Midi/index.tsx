@@ -6,6 +6,7 @@ export default function Midi() {
   const { togglePlayPause, playing, ready, loading } = useAudioPlayer({
     src: "sounds/LostWoods.mp3",
     format: "mp3",
+    loop: true,
     autoplay: false,
     onend: () => console.log("sound has ended!"),
   });
