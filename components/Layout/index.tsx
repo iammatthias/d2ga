@@ -18,12 +18,8 @@ type DataProps = {
   left: number;
 };
 
-function HomeLayout() {
-  return (
-    <main className={layoutItem}>
-      <Midi />
-    </main>
-  );
+function HomeLayout({ children }: Props) {
+  return <main className={layoutItem}>{children}</main>;
 }
 
 function D2gaLayout({ data }: Props) {
@@ -91,7 +87,7 @@ export default function Layout({ children, data }: Props) {
   const pathname = useRouter().pathname;
 
   if (pathname === "/") {
-    return <HomeLayout />;
+    return <HomeLayout>{children}</HomeLayout>;
   } else if (pathname === "/d2ga/END") {
     return <GeneralLayout>{children}</GeneralLayout>;
   } else if (pathname === "/404") {
