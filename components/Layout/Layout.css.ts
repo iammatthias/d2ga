@@ -10,38 +10,3 @@ export const layout = style({
   gap: "16px",
   padding: "16px",
 });
-
-export const layoutItem = style({
-  height: "100%",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  flexDirection: "column",
-  "@media": {
-    "screen and (min-width: 768px)": {
-      flexDirection: "row",
-    },
-  },
-});
-
-export const layoutItem1a = style({
-  justifyContent: "flex-start",
-  alignItems: "flex-start",
-  gap: "16px",
-});
-
-export const layoutItem1b = style({});
-
-export const layoutItem1c = style({});
-
-export const layoutItem2a = style({});
-
-export const layoutItem2b = style({});
-
-export const layoutItem2c = style({});
-
-export const layoutItem3a = style({});
-
-export const layoutItem3b = style({});
-
-export const layoutItem3c = style({});
