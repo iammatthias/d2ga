@@ -16,6 +16,12 @@ export const layoutItem = style({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  flexDirection: "column",
+  "@media": {
+    "screen and (min-width: 768px)": {
+      flexDirection: "row",
+    },
+  },
 });
 
 export const layoutItem1a = style({
