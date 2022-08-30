@@ -8,7 +8,7 @@ type Props = {
 };
 
 export default function Midi({ enter, exit }: Props) {
-  const { togglePlayPause, pause, play, playing, ready, loading } = useAudioPlayer({
+  const { togglePlayPause, stop, play, playing, ready, loading } = useAudioPlayer({
     src: "sounds/LostWoods.mp3",
     format: "mp3",
     loop: true,
@@ -25,7 +25,7 @@ export default function Midi({ enter, exit }: Props) {
   };
 
   const exitHandler = () => {
-    pause();
+    stop();
     router.replace({
       pathname: "/",
     });
