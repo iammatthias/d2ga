@@ -16,17 +16,11 @@ export default function Midi({ enter, exit }: Props) {
     onend: () => console.log("sound has ended!"),
   });
 
-  const clickHandler = () => {
+  const playHandler = () => {
     if (playing) {
       togglePlayPause();
-      router.replace({
-        pathname: "/",
-      });
     } else {
       togglePlayPause();
-      router.replace({
-        pathname: "./d2ga/1",
-      });
     }
   };
 
@@ -40,7 +34,7 @@ export default function Midi({ enter, exit }: Props) {
   const enterHandler = () => {
     play();
     router.replace({
-      pathname: "/",
+      pathname: "./d2ga/1",
     });
   };
 
@@ -62,7 +56,7 @@ export default function Midi({ enter, exit }: Props) {
   if (loading) return <div>Loading audio</div>;
 
   return (
-    <button className={midi} onClick={clickHandler}>
+    <button className={midi} onClick={playHandler}>
       {playing ? "Pause" : "Play"}
     </button>
   );
