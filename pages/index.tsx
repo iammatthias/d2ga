@@ -3,7 +3,7 @@ import Midi from "@/components/Midi";
 export default function Home() {
   return (
     <>
-      <Midi />
+      <Midi enter />
     </>
   );
 }

@@ -30,6 +30,7 @@ function D2gaLayout({ data }: Props) {
     <main className={layout}>
       <div className={`${layoutItem} ${layoutItem1a}`}>
         <Midi />
+        <Midi exit />
       </div>
       <div
         className={`${layoutItem} ${layoutItem1b}`}

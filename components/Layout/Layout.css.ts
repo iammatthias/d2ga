@@ -21,6 +21,7 @@ export const layoutItem = style({
 export const layoutItem1a = style({
   justifyContent: "flex-start",
   alignItems: "flex-start",
+  gap: "16px",
 });
 
 export const layoutItem1b = style({});
