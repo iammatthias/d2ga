@@ -13,7 +13,7 @@ export const container = style({
   height: "100vh",
   display: "grid",
   gridTemplateColumns: "1fr",
-  gridTemplateRows: "34px 1fr 34px",
+  gridTemplateRows: "64px 1fr 64px",
   gridTemplateAreas: `"." "subGrid" "."`,
   gap: "16px",
 });

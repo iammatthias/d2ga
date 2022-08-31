@@ -5,13 +5,8 @@ export const item = style({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  flexDirection: "column",
+  flexDirection: "row",
   gap: "16px",
-  "@media": {
-    "screen and (min-width: 768px)": {
-      flexDirection: "row",
-    },
-  },
 });
 
 export const item1a = style({
