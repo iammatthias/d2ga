@@ -1,9 +1,9 @@
-import Midi from "@/components/Midi";
+import Button from "@/components/Button";
 
 export default function Home() {
   return (
     <>
-      <Midi enter />
+      <Button enter />
     </>
   );
 }

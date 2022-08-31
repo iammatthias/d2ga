@@ -6,6 +6,7 @@ export const item = style({
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "column",
+  gap: "16px",
   "@media": {
     "screen and (min-width: 768px)": {
       flexDirection: "row",

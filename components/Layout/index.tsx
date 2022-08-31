@@ -1,19 +1,24 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { item } from "@/styles/page.css";
+import Midi from "@/components/Button";
 
-import { layout } from "./Layout.css";
+import { layout, container, subGrid } from "./Layout.css";
 
 type Props = {
   children?: React.ReactNode;
 };
 
-function HomeLayout({ children }: Props) {
-  return <main className={item}>{children}</main>;
-}
-
 function D2gaLayout({ children }: Props) {
-  return <main className={layout}>{children}</main>;
+  return (
+    <main className={container}>
+      <div className={item}>
+        <Midi />
+        <Midi exit />
+      </div>
+      <div className={subGrid}>{children}</div>
+    </main>
+  );
 }
 
 function GeneralLayout({ children }: Props) {
@@ -21,14 +26,11 @@ function GeneralLayout({ children }: Props) {
 }
 
 export default function Layout({ children }: Props) {
-  const pathname = useRouter().pathname;
+  const router = useRouter();
+  const pathname = router.asPath;
 
-  if (pathname === "/") {
-    return <HomeLayout>{children}</HomeLayout>;
-  } else if (pathname === "/d2ga/END") {
+  if (pathname === "/" || pathname === "/404") {
     return <GeneralLayout>{children}</GeneralLayout>;
-  } else if (pathname === "/404") {
-    return <HomeLayout>{children}</HomeLayout>;
   } else {
     return <D2gaLayout>{children}</D2gaLayout>;
   }

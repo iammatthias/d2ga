@@ -1,9 +1,8 @@
 import { AppProps } from "next/app";
-import { useRouter } from "next/router";
 import { AudioPlayerProvider } from "react-use-audio-player";
-
-import "@/styles/reset.css";
 import Layout from "@/components/Layout";
+import "@/styles/reset.css";
+import data from "@/components/paths.json";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

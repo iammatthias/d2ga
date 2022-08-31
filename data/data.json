@@ -78,9 +78,16 @@
   },
   {
     "room": 12,
-    "top": "END",
+    "top": 13,
     "right": 1,
     "bottom": 1,
     "left": 1
+  },
+  {
+    "room": 13,
+    "top": 13,
+    "right": 13,
+    "bottom": 13,
+    "left": 13
   }
 ]

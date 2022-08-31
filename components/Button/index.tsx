@@ -1,15 +1,15 @@
 import router from "next/router";
 import { useAudioPlayer } from "react-use-audio-player";
-import { midi } from "./Midi.css";
+import { button } from "./Button.css";
 
 type Props = {
   enter?: boolean;
   exit?: boolean;
 };
 
-export default function Midi({ enter, exit }: Props) {
+export default function Button({ enter, exit }: Props) {
   const { togglePlayPause, stop, play, playing, ready, loading } = useAudioPlayer({
-    src: "sounds/LostWoods.mp3",
+    src: "/sounds/LostWoods.mp3",
     format: "mp3",
     loop: true,
     autoplay: false,
@@ -40,14 +40,14 @@ export default function Midi({ enter, exit }: Props) {
 
   if (exit)
     return (
-      <button className={midi} onClick={exitHandler}>
+      <button className={button} onClick={exitHandler}>
         Escape
       </button>
     );
 
   if (enter)
     return (
-      <button className={midi} onClick={enterHandler}>
+      <button className={button} onClick={enterHandler}>
         Enter
       </button>
     );
@@ -56,7 +56,7 @@ export default function Midi({ enter, exit }: Props) {
   if (loading) return <div>Loading audio</div>;
 
   return (
-    <button className={midi} onClick={playHandler}>
+    <button className={button} onClick={playHandler}>
       {playing ? "Pause" : "Play"}
     </button>
   );
