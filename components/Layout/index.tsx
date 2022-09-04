@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { item } from "@/styles/page.css";
-import Midi from "@/components/Button";
+import AudioButton from "@/components/AudioButton";
 
 import { layout, container, subGrid } from "./Layout.css";
 
@@ -13,8 +13,8 @@ function D2gaLayout({ children }: Props) {
   return (
     <main className={container}>
       <div className={item}>
-        <Midi />
-        <Midi exit />
+        <AudioButton />
+        <AudioButton exit />
       </div>
       <div className={subGrid}>{children}</div>
     </main>

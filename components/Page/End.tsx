@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import Midi from "@/components/Button";
+import Midi from "@/components/AudioButton";
 import DoorwayButton from "@/components/DoorwayButton";
 import { item, item1a, item1b, item1c, item2a, item2b, item2c, item3a, item3b, item3c } from "@/styles/page.css";
 

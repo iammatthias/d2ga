@@ -1,16 +1,19 @@
 import router from "next/router";
 import { useAudioPlayer } from "react-use-audio-player";
-import { button } from "./Button.css";
+import { audioButton } from "./AudioButton.css";
+
+// import LostWoods from "@/public/sounds/LostWoods.mp3";
 
 type Props = {
   enter?: boolean;
   exit?: boolean;
 };
 
-export default function Button({ enter, exit }: Props) {
-  const { togglePlayPause, stop, play, playing, ready, loading } = useAudioPlayer({
-    src: "/sounds/LostWoods.mp3",
-    format: "mp3",
+export default function AudioButton({ enter, exit }: Props) {
+  const { togglePlayPause, stop, play, playing, ready, loading, error } = useAudioPlayer({
+    src: "sounds/LostWoods.mp3",
+    format: ["mp3"],
+    html5: true,
     loop: true,
     autoplay: false,
     onend: () => console.log("sound has ended!"),
@@ -40,23 +43,27 @@ export default function Button({ enter, exit }: Props) {
 
   if (exit)
     return (
-      <button className={button} onClick={exitHandler}>
+      <button className={audioButton} onClick={exitHandler}>
         Escape
       </button>
     );
 
   if (enter)
     return (
-      <button className={button} onClick={enterHandler}>
+      <button className={audioButton} onClick={enterHandler}>
         Enter
       </button>
     );
+
+  if (error) {
+    console.log(error);
+  }
 
   if (!ready && !loading) return <div>No audio to play</div>;
   if (loading) return <div>Loading audio</div>;
 
   return (
-    <button className={button} onClick={playHandler}>
+    <button className={audioButton} onClick={playHandler}>
       {playing ? "Pause" : "Play"}
     </button>
   );
