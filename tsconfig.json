@@ -28,7 +28,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "hooks/useLocalStorage.js"  ],
+, "hooks/useLocalStorage.js", "hooks/useKeyPress.js"  ],
   "exclude": [
     "node_modules"
   ]

@@ -55,10 +55,6 @@ export default function AudioButton({ enter, exit }: Props) {
       </button>
     );
 
-  if (error) {
-    console.log(error);
-  }
-
   if (!ready && !loading) return <div>No audio to play</div>;
   if (loading) return <div>Loading audio</div>;
 

@@ -1,3 +1,6 @@
+import { useRouter } from "next/router";
+
+import { useHotkeys } from "react-hotkeys-hook";
 import DoorwayButton from "@/components/DoorwayButton";
 import { item, item1a, item1b, item1c, item2a, item2b, item2c, item3a, item3b, item3c } from "@/styles/page.css";
 
@@ -10,6 +13,32 @@ type Props = {
 };
 
 export default function D2ga({ room, top, left, right, bottom }: Props) {
+  const router = useRouter();
+
+  useHotkeys("up", (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+
+    router.push(`/d2ga/${top}`);
+  });
+
+  useHotkeys("down", (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+
+    router.push(`/d2ga/${bottom}`);
+  });
+
+  useHotkeys("left", (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+
+    router.push(`/d2ga/${left}`);
+  });
+
+  useHotkeys("right", (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+
+    router.push(`/d2ga/${right}`);
+  });
+
   return (
     <>
       {/* 1a */}
